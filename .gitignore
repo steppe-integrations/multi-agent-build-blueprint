@@ -1,0 +1,20 @@
+# Tools
+tools/jaeger.exe
+tools/jaeger-*.tar.gz
+tools/jaeger-*-windows-amd64/
+
+# Logs
+*.log
+*.log.err
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local runtime
+runtime/

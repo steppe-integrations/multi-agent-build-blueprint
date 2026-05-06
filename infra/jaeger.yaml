@@ -1,0 +1,43 @@
+# Jaeger v2 config — single-binary all-in-one for dev.
+#
+# Binds:
+#   OTLP gRPC :4317
+#   OTLP HTTP :4318
+#   Jaeger UI :16686 (also serves the query API)
+#
+# Storage: in-memory (good for dev). For persistent, see jaeger-persistent.yaml.
+
+service:
+  extensions: [jaeger_storage, jaeger_query]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger_storage_exporter]
+
+extensions:
+  jaeger_storage:
+    backends:
+      memory_main:
+        memory:
+          max_traces: 100000
+  jaeger_query:
+    storage:
+      traces: memory_main
+    http:
+      endpoint: 0.0.0.0:16686
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+
+exporters:
+  jaeger_storage_exporter:
+    trace_storage: memory_main
