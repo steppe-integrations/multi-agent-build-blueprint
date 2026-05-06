@@ -2,12 +2,28 @@
 
 A complete, paste-ready guide to standing up the **Dispatch + MAF + OTel** stack — the build-and-run substrate behind durable AI-assisted engineering at Steppe Integrations.
 
+![The Multi-Agent Stack: Dispatch, MAF, and OTel — three pillars and one trace ID across them](assets/multi-agent-stack-bridge.png)
+
 This repo is the canonical companion to:
 
 - **Article:** [Dispatch + MAF + OTel: A Complete Multi-Agent Stack](https://steppeintegrations.com/articles/dispatch-maf-otel-stack/)
 - **Methodology piece:** [Five Layers for a Replicable AI-Assisted Build Session](https://steppeintegrations.com/articles/five-layer-build-blueprint/)
 
 If you're reading the article and thinking *"how do I actually stand this up?"* — you're in the right place.
+
+---
+
+## Diagrams & visual references
+
+A handful of artifacts that explain the stack at different levels of zoom:
+
+| Visual | Format | Where |
+|---|---|---|
+| **Three-pillar bridge infographic** (above) — single-frame overview of all three pillars + the 3-PC scaling pattern + the production payoff | PNG | [`assets/multi-agent-stack-bridge.png`](assets/multi-agent-stack-bridge.png) |
+| **The Multi-Agent Telemetry Spine** — 10-page swipe deck (LinkedIn-friendly), same content paced for stepwise reading | PDF, 10pp | [`assets/multi-agent-telemetry-spine.pdf`](assets/multi-agent-telemetry-spine.pdf) |
+| **Three-pillar architecture diagram** — vertical stack: Dispatch (build) → MAF (runtime) → OTel (observability) | Inline SVG | [in the article](https://steppeintegrations.com/articles/dispatch-maf-otel-stack/) — first diagram |
+| **3-PC topology diagram** — orchestrator / overflow / persistent + phone via Dispatch | Inline SVG | [in the article](https://steppeintegrations.com/articles/dispatch-maf-otel-stack/) — second diagram |
+| **Unified observability waterfall** — one trace ID across build-time and runtime spans | Inline SVG | [in the article](https://steppeintegrations.com/articles/dispatch-maf-otel-stack/) — third diagram |
 
 ---
 
